@@ -1,0 +1,59 @@
+.sidebar {
+    min-height: 900px;
+    max-height: max-content !important;
+    width: 350px;
+}
+.checklist {
+    border-left-width: 2px !important;
+    ul.nav.flex-column {
+      margin-left: -24px;
+    }
+}
+.bg-primary {
+    background-color: #031E41 !important;
+  }
+   
+  .bg-primary {
+    background-color: #031E41 !important;
+  }
+  
+  .text-primary {
+    color: #031E41 !important;
+  }
+  
+  .bg-secondary {
+    background-color: #d60b30 !important;
+  }
+  
+  .text-secondary {
+    color: #d60b30 !important;
+  }
+  
+  .text-light {
+    color: #b8b9b9 !important;
+  }
+  
+  .border {
+    &.border-top {
+      border-width: 0px !important;
+      border-top-width: 1px !important;
+    }
+    &.border-bottom {
+      border-width: 0px !important;
+      border-bottom-width: 1px !important;
+    }
+    &.border-left {
+      border-width: 0px !important;
+      border-left-width: 1px !important;
+    }
+    &.border-right {
+      border-width: 0px !important;
+      border-right-width: 1px !important;
+    }
+  }
+  
+  .btn-secondary {
+    background-color: #d60b30 !important;
+    color: #fcfcfc !important;
+    border-color: #d60b30 !important;
+  }

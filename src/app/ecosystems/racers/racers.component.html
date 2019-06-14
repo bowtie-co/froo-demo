@@ -1,0 +1,27 @@
+<!-- <h2 class="text-center mt-5">Racers</h2>
+-->
+<app-heading class="text-center" heading="Racers"></app-heading>
+
+<app-table
+  [columns]="tableColumns"
+  [data]="racers"
+  [linkEach]="'/racers'"
+  (deleted)="delete($event)"
+  >
+</app-table>
+
+<div class="input-group w-50 mx-auto">
+  <div class="input-group-prepend">
+    <span class="input-group-text">Add racer</span>
+  </div>
+  <input class="form-control" #racerFirstName placeholder="First Name" (keyup.enter)="add(racerFirstName.value, racerLastName.value); racerFirstName.value=''; racerLastName.value=''"/>
+  <input class="form-control" #racerLastName placeholder="Last Name" (keyup.enter)="add(racerLastName.value, racerLastName.value); racerFirstName.value=''; racerLastName.value=''"/>
+  <div class="input-group-append">
+    <button class="btn btn-outline-primary" (click)="add(racerFirstName.value, racerLastName.value); racerFirstName.value=''; racerLastName.value=''">
+      Add
+    </button>
+  </div>
+</div>
+<!-- Call upon the racer detail component, and give it a data binding (Like a React Prop)
+of racer. which is the selectedRacer from the racer component -->
+<!-- <app-racer-detail [racer]="selectedracer"></app-racer-detail> -->

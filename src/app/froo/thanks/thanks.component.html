@@ -1,0 +1,7 @@
+<div class="container-fluid">
+  <app-page-title [title] = "pageTitle"  ></app-page-title>
+  <h4>Your report has been submitted!</h4>
+  <div class="form-group mt-4" *ngFor = "let button of buttonlist">
+    <button class="btn btn-outline-primary btn-block w-50">{{button}}</button>
+  </div>
+</div>

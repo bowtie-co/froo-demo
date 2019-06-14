@@ -1,0 +1,118 @@
+// this file includes USAC defined variables and variable overrides
+
+// typography here
+
+$letter-spacing: .05em;
+
+// include fonts here
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+@font-face {
+  font-family: 'Calibre';
+  font-weight: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Calibre-Regular.ttf');
+}
+@font-face {
+  font-family: 'Calibre';
+  font-weight: 500;
+  src: url('../assets/fonts/Calibre-Medium.ttf');
+}
+@font-face {
+  font-family: 'Calibre';
+  font-weight: bold;
+  font-weight: 600;
+  src: url('../assets/fonts/Calibre-Semibold.ttf');
+}
+@font-face {
+  font-family: 'Calibre';
+  font-weight: 700;
+  src: url('../assets/fonts/Calibre-Bold.ttf');
+}
+
+$usac-primary-font: 'Calibre';
+$usac-secondary-font: 'Roboto';
+
+.calibre {
+  font-family: 'Calibre', $usac-primary-font;
+}
+
+// custom USAC variables below
+
+$usac-white: #fff;
+$usac-gray-1: #fafafa;
+$usac-gray-2: #eaeaea;
+$usac-gray-3: #d5d5d5;
+$usac-gray-4: #bababa;
+$usac-primary: #192425;
+$usac-red-primary: #c90019;
+$usac-red-1: #921515;
+$usac-blue-primary: #181d49;
+$usac-blue-1: #003d6e;
+$usac-secondary: #d5ba93;
+$usac-secondary-2: #b99e79;
+$usac-blue-info: #1a5870;
+$usac-blue-help: #007ca0;
+$usac-green-1: #51aa60;
+$usac-green-2: #2c792a;
+$usac-yellow-1: #e2b04d;
+$usac-orange: #de5c0e;
+
+
+
+
+// bootstrap overrides
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+// bootstrap Color map
+
+$theme-colors:
+  (
+    "primary":    $usac-red-primary,
+    "secondary":  $usac-blue-primary,
+    "success":    $usac-green-1,
+    "info":       $usac-blue-info,
+    "warning":    $usac-orange,
+    "danger":     $usac-red-1,
+    "light":      $usac-gray-2,
+    "dark":       $usac-primary
+  );
+
+// bootstrap Color system
+
+$white:    $usac-white;
+$gray-100: $usac-gray-1;
+$gray-200: $usac-gray-2;
+$gray-300: $usac-gray-3;
+$gray-400: $usac-gray-4;
+$gray-500: $usac-gray-4;
+// $gray-600: #6c757d;
+// $gray-700: #495057;
+// $gray-800: #343a40;
+// $gray-900: #212529;
+$black:    #000;
+
+$blue:    $usac-blue-1;
+$indigo:  $usac-blue-primary;
+//$purple:  #6f42c1;
+//$pink:    #e83e8c;
+$red:     $usac-red-primary;
+$orange:  $usac-orange;
+$yellow:  $usac-yellow-1;
+$green:   $usac-green-1;
+$teal:    $usac-blue-help;
+$cyan:    $usac-blue-info;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-size-base:              1rem; // Assumes the browser default 16, to yield `15px` use .9375rem
+
+$font-family-sans-serif: $usac-primary-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+// $input-btn-padding-y:         .575rem;
+// $input-btn-padding-x:         1.25rem;

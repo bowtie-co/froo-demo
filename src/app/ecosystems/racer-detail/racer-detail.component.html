@@ -1,0 +1,40 @@
+<div *ngIf="racer">
+  <div class="card w-25 mt-5 mx-auto">
+    <div class="row no-gutters">
+      <div class="col-md-4 bg-secondary">
+        <h5 class="text-light text-center mt-5">Image</h5>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h4 class="card-title">{{racer.lastName}}, {{racer.firstName}}</h4>
+          <p class="card-text"><small class="text-muted">ID: {{racer.id}}</small></p>
+          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur alias temporibus pariatur natus odit dolore reiciendis non aut, similique commodi voluptatum deleniti.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group mt-2">
+    <label class="d-block text-center">Edit First Name</label>
+    <input class="form-control w-25 mx-auto" [(ngModel)]="racer.firstName" placeholder="First Name" />
+  </div>
+  <div class="form-group">
+    <label class="d-block text-center">Edit Last Name</label>
+    <input class="form-control w-25 mx-auto" [(ngModel)]="racer.lastName" placeholder="Last Name" />
+  </div>
+  <div class="w-25 mx-auto">
+  <app-btn
+    class="mr-2"
+    title="Save racer details"
+    (click)="save()"
+    btnType="btn-primary"
+    btnText="Save">
+  </app-btn>
+  <app-btn
+    title="Go back"
+    (click)="goBack()"
+    btnType="btn-outline-success"
+    btnText="Go back">
+  </app-btn>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+// this theme file should include specific component overrides
+
+strong, .strong {
+  font-weight: 500;
+}
+
+.wizard {
+  .body {}
+  .indicator {
+    .step {}
+    .label {}
+  }
+}
+
+.card {
+  margin: 10px auto;
+}
