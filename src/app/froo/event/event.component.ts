@@ -23,6 +23,8 @@ export class EventComponent implements OnInit {
   isConfirmed: boolean;
   pageTitle = 'Find Event';
 
+  eventError: string;
+
   constructor(
     private events:EventsService, 
     private router: Router,
@@ -50,8 +52,16 @@ export class EventComponent implements OnInit {
 
     console.log(criteria);
     this.events.searchEvents(criteria).subscribe(results => {
-      console.log(results);
       this.eventsList = results
+      if(results === null || results === undefined) {
+        this.eventError = "Event not found by this search critera";
+      } else {
+        if(Object.keys(results).length > 0) {
+          this.eventError = "";
+        } 
+      }
+    }, (error) =>  {
+      this.eventError = "Service is not available";
     });
   }
 

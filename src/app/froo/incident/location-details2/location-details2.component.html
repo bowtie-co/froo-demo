@@ -1,0 +1,30 @@
+<section class=" pl-0">
+    <h5 class="text-left mt-4 text-secondary ">What was the course ground type?  </h5>
+    <form class="form">
+        <div class="form-check w-50 border border-left-0 border-right-0  py-2"
+        *ngFor="let coursetype of coursetypes">
+        <input type="checkbox" 
+          class="form-check-input" 
+          (click) ="selectCourseType(coursetype.opt)"  
+          value="coursetype.opt" 
+          id="{{coursetype.opt}}"
+          name="coursetype" />
+          <label for="{{coursetype.opt}}">{{coursetype.title}}</label>
+        </div>
+        <h5 class="text-left mt-4 text-secondary ">What were the course conditions?  </h5>
+        <div class="form-check w-50 border border-left-0 border-right-0  py-2"
+        *ngFor="let condition of conditionslist">
+        <input type="radio" 
+          class="form-check-input" 
+          (click) ="selectConditionType(condition.opt)"  
+          value="condition.opt" 
+          id="{{condition.opt}}"
+          name="condition" />
+          <label for="{{condition.opt}}">{{condition.title}}</label>
+      </div>
+      <div class="container-fluid my-3">
+        <button (click)="goPrev()" class="btn btn-secondary  px-4">BACK</button> 
+        <button (click)="goNext()" class="btn btn-secondary  float-right mr-4 px-4">NEXT</button>
+      </div>  
+</form>
+</section>

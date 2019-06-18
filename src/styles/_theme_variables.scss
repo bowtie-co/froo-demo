@@ -40,6 +40,8 @@ $usac-secondary-font: 'Roboto';
 
 // custom USAC variables below
 
+
+
 $usac-white: #fff;
 $usac-gray-1: #fafafa;
 $usac-gray-2: #eaeaea;
@@ -106,7 +108,78 @@ $teal:    $usac-blue-help;
 $cyan:    $usac-blue-info;
 
 // Typography
-//
+h1, .h1 {
+  font-family: ProximaNova;
+  font-size: 48px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #041e41;
+}
+h2, .h2{
+  width: 813px;
+  height: 50px;
+  font-family: ProximaNova;
+  font-size: 42px;
+  font-weight: 900;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d0021b;
+}
+h3, .h3{
+  width: 813px;
+  height: 43px;
+  font-family: ProximaNova;
+  font-size: 36px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #041e41;
+}
+h4, .h4 {
+width: 813px;
+height: 38px;
+font-family: ProximaNova;
+font-size: 32px;
+font-weight: 900;
+font-style: normal;
+font-stretch: normal;
+line-height: normal;
+letter-spacing: normal;
+color: #d0021b;
+}
+
+h5, .h5 {
+  width: 813px;
+  height: 29px;
+  font-family: ProximaNova;
+  font-size: 24px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #041e41;
+}
+
+h6, .h6 {
+  width: 813px;
+  height: 22px;
+  font-family: ProximaNova;
+  font-size: 18px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d0021b;
+}
 // Font, line-height, and color for body text, headings, and more.
 
 $font-size-base:              1rem; // Assumes the browser default 16, to yield `15px` use .9375rem
@@ -116,3 +189,8 @@ $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mon
 
 // $input-btn-padding-y:         .575rem;
 // $input-btn-padding-x:         1.25rem;
+
+
+
+
+

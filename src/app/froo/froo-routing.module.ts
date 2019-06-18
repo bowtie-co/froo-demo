@@ -5,6 +5,7 @@ import { FrooComponent } from './froo.component';
 import { HomeComponent } from './home/home.component';
 import { EventComponent } from './event/event.component';
 import { ThanksComponent } from './thanks/thanks.component';
+import { IncidentComponent } from './incident/incident.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
       { path: '', component: EventComponent },
       { path: 'home', component: HomeComponent },
       { path: 'event', component: EventComponent },
+      { path: 'incident', component: IncidentComponent },
       { path: 'thanks', component: ThanksComponent }
     ]
   }

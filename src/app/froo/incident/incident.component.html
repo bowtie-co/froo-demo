@@ -1,0 +1,9 @@
+<app-page-title [title] = "config.title"  ></app-page-title>
+<div [ngSwitch]="state">
+    <app-time-of-incident *ngSwitchCase="1" [incident]="incident" (notify)="onNotify()" ></app-time-of-incident>
+    <app-race-details *ngSwitchCase="2" [incident]="incident" (notify)="onNotify()" ></app-race-details>
+    <app-location-details1 *ngSwitchCase="3" [incident]="incident" (notify)="onNotify()" ></app-location-details1>
+    <app-location-details2 *ngSwitchCase="4" [incident]="incident" (notify)="onNotify()" ></app-location-details2>
+    <app-location-details3 *ngSwitchCase="5" [incident]="incident" (notify)="onNotify()" ></app-location-details3>
+    <div *ngSwitchDefault> Please go First and Continue </div>
+</div>

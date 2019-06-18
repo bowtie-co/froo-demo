@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import { FrooService } from '../../froo.service';
+import {FrooService} from '../../froo.service';
 
 
 @Component({

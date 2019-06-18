@@ -1,13 +1,13 @@
 <aside class="fixed-top bg-primary text-white sidebar p-2">
   <div class="mt-md-5 text-center" >
     <img src="https://www.usacycling.org/images/USACycling_Logo.png" />
-    <h1> First Report of Occurrence </h1>
+    <h1 class="text-white"> First Report of Occurrence </h1>
   </div>    
   <div class="clearfix" ></div>
   <div class="checklist border border-left ml-5 my-3" >
     <ul class="nav flex-column " >
       <li class="nav-item mb-2">
-        <a class="nav-link text-light" > 
+        <a class="nav-link" > 
           <span class="fa fa-circle-o mr-3 bg-primary"
               [class.fa-circle-o] = 'froo.getState() == 0'
               [class.fa-check-circle] = 'froo.getState() > 0'
@@ -16,7 +16,7 @@
         </a>
       </li>
       <li class="nav-item mb-2">
-        <a class="nav-link text-light">
+        <a class="nav-link" [class.text-light] = "froo.getState() < 1" >
           <span class="fa fa-circle mr-3 bg-primary" 
             [class.fa-circle] = 'froo.getState() < 1'
             [class.fa-circle-o] = 'froo.getState() == 1'
@@ -26,7 +26,7 @@
         </a>
       </li>
       <li class="nav-item mb-2">
-        <a class="nav-link text-light">
+        <a class="nav-link" [class.text-light] = "froo.getState() < 2">
           <span class="fa fa-circle mr-3 bg-primary" 
             [class.fa-circle] = 'froo.getState() < 2'
             [class.fa-circle-o] = 'froo.getState() == 2'
@@ -36,7 +36,7 @@
         </a>
       </li>
       <li class="nav-item mb-2">
-        <a class="nav-link text-light" >
+        <a class="nav-link" [class.text-light] = "froo.getState() < 3" >
           <span class="fa fa-circle mr-3 bg-primary" 
             [class.fa-circle] = 'froo.getState() < 3'
             [class.fa-circle-o] = 'froo.getState() == 3'
@@ -46,7 +46,7 @@
         </a>
       </li>
       <li class="nav-item mb-2">
-        <a class="nav-link text-light" href="#">
+        <a class="nav-link"  [class.text-light] = "froo.getState() < 4" >
           <span class="fa fa-circle mr-3 bg-primary" 
             [class.fa-circle] = 'froo.getState() < 4'
             [class.fa-circle-o] = 'froo.getState() == 4'
@@ -60,6 +60,6 @@
   <div class="clearfix" ></div>
   <hr class="my-2" />
   <div class="sidebar-footer text-center" >
-    <a href="" class="btn btn-outline-light rounded-0" >Return to Account</a>
+    <a href="" class="btn btn-outline-light" >Return to Account</a>
   </div>
 </aside>
