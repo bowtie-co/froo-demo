@@ -1,4 +1,5 @@
 export const environment = {
   production: false,
-  env: 'staging'
+  env: 'staging',
+  endPoint: 'https://stage-api.usacycling.org/events'
 };

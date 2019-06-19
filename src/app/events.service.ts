@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
-const EndPoint = 	'https://stage-api.usacycling.org/events';
-
+// const EndPoint = 	'https://stage-api.usacycling.org/events';
+const EndPoint = environment.endPoint;
 
 @Injectable({
   providedIn: 'root'
