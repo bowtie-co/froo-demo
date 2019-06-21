@@ -1,11 +1,17 @@
 <section class="pl-0 mb-5" *ngIf="!isConfirmed" >
 <app-page-title [title] = "pageTitle"  ></app-page-title>
   <h3 class="text-left mt-4 "> Search for event </h3>
-  <form class="form">
+  <form class="form" [formGroup]="form">
       <div class="row align-items-center justify-content-between pr-5">
           <div class="col-md-4 ">
               <div class="form-group">
                   <label for="eventName">Event Name</label>
+                  <app-input-item type="text" 
+                  formControlName="eventName"
+                  class="form-control rounded-0" 
+                  name="eventName"
+                  id="eventName"
+                  placeholder="Search Event Name"></app-input-item>
                   <input type="text" 
                       class="form-control rounded-0" 
                       [(ngModel)]="findEventName"
