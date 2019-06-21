@@ -1,0 +1,12 @@
+<ul class="nav flex-column ">
+  <li class="nav-item mb-2" *ngFor="let item of items; let i = index" [attr.data-index]="i">
+    <a class="nav-link" >
+      <span class="fa fa-circle-o mr-3"
+          [class.fa-circle] = 'froo.getState() < i'
+          [class.fa-circle-o] = 'froo.getState() == i'
+          [class.fa-check-circle] = 'froo.getState() > i'
+      ></span>
+      <span>{{item}}</span>
+    </a>
+  </li>
+</ul>

@@ -7,6 +7,13 @@ import { FrooService } from '../../froo.service';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  sidebarList = [
+    'Event',
+    'Incident',
+    'Injured Person',
+    'Witness',
+    'Signature'
+  ]
 
   constructor(private froo: FrooService) { }
 
