@@ -3,11 +3,11 @@
   <h3 class="text-left mt-4 "> Search for event </h3>
   <form class="form">
       <div class="row align-items-center justify-content-between pr-5">
-          <div class="col-md-4 ">
+          <div class="col-md-4">
               <div class="form-group">
                   <label for="eventName">Event Name</label>
-                  <input type="text" 
-                      class="form-control rounded-0" 
+                  <input type="text"
+                      class="form-control "
                       [(ngModel)]="findEventName"
                       name="eventName"
                       id="eventName"
@@ -17,36 +17,36 @@
           <div class="col-md-4">
               <div class="form-group">
                   <label for="eventPermit">Permit#</label>
-                  <input type="text" 
-                      class="form-control rounded-0" 
-                      name="eventPermit" 
-                      id="eventPermit" 
+                  <input type="text"
+                      class="form-control "
+                      name="eventPermit"
+                      id="eventPermit"
                       placeholder="Permit#"
-                      [(ngModel)]="findEventPermit" 
+                      [(ngModel)]="findEventPermit"
                   />
               </div>
           </div>
           <div class="col-md-4">
               <div class="form-group">
                   <label for="eventId">Event ID</label>
-                  <input type="text" 
-                      class="form-control rounded-0" 
-                      name="eventId" 
-                      id="eventId" 
+                  <input type="text"
+                      class="form-control "
+                      name="eventId"
+                      id="eventId"
                       placeholder="Event#"
-                      [(ngModel)]="findEventId" 
+                      [(ngModel)]="findEventId"
                   />
               </div>
           </div>
       </div>
       <div class="form-group">
-          <button class="btn btn-secondary  px-4" 
+          <button class="btn btn-secondary  px-4"
               [class.btn-disabled]="findEventName === ''"
               (click) = "findEvents()" >SEARCH
           </button>
       </div>
   </form>
-  <div class="container-fluid px-0" *ngIf="eventError" > 
+  <div class="container-fluid px-0" *ngIf="eventError" >
     <div class="p-2 bg-primary text-white border" >
         {{eventError}}
     </div>
@@ -57,9 +57,9 @@
           <h5 class="mt-5 mb-3 "> Select your event </h5>
       </div>
       <div class="row align-items-start justify-content-start no-gutters">
-          <div class="col-md-4" 
+          <div class="col-md-4"
             *ngFor="let event of eventsList">
-              <div class="card bg-light rounded-0 m-1" 
+              <div class="card bg-light  m-1"
                   [class.border-primary] = "selectedEvent == event.event_id"
                   (click) = "selectEvent(event)">
                   <div class="card-body">
@@ -73,9 +73,9 @@
           </div>
       </div>
       <div class="container-fluid text-right px-0" >
-          <a class="btn btn-secondary text-white  px-4" 
+          <a class="btn btn-secondary text-white  px-4"
               *ngIf = "selectedEvent > 0"
-              (click) = "nextProc()" >CONTINUE</a>   
+              (click) = "nextProc()" >CONTINUE</a>
       </div>
   </div>
 </section>

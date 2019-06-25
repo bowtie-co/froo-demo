@@ -4,14 +4,30 @@ strong, .strong {
   font-weight: 500;
 }
 
-.wizard {
-  .body {}
-  .indicator {
-    .step {}
-    .label {}
-  }
+//chad replacing inline styles in components
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  // you could extract common flex usage into mixins if it makes sense for you
+  span.fa {margin-right: 1em;}
 }
 
+form {
+  .input-group {
+    input.form-control, input {
+      font-size: $input-btn-font-size;
+    }
+  }
+  .form-control {
+    min-width: 244px;
+    min-height: 40px;
+    border-radius: 4px;
+    font-size: $input-btn-font-size;
+    &:active, &:focus {
+      border: solid 1px $usac-blue-1;
+    }
+  }
+}
 .card {
   margin: 10px auto;
 }

@@ -2,61 +2,11 @@
   <div class="mt-md-5 text-center" >
     <img src="https://www.usacycling.org/images/USACycling_Logo.png" />
     <h1 class="text-white"> First Report of Occurrence </h1>
-  </div>    
+  </div>
   <div class="clearfix" ></div>
   <div class="checklist border border-left ml-5 my-3" >
-    <ul class="nav flex-column " >
-      <li class="nav-item mb-2">
-        <a class="nav-link" > 
-          <span class="fa fa-circle-o mr-3 bg-primary"
-              [class.fa-circle-o] = 'froo.getState() == 0'
-              [class.fa-check-circle] = 'froo.getState() > 0'
-          ></span> 
-          <span>Event</span> 
-        </a>
-      </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link" [class.text-light] = "froo.getState() < 1" >
-          <span class="fa fa-circle mr-3 bg-primary" 
-            [class.fa-circle] = 'froo.getState() < 1'
-            [class.fa-circle-o] = 'froo.getState() == 1'
-            [class.fa-check-circle] = 'froo.getState() > 1'
-          ></span> 
-          <span>Incident</span> 
-        </a>
-      </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link" [class.text-light] = "froo.getState() < 2">
-          <span class="fa fa-circle mr-3 bg-primary" 
-            [class.fa-circle] = 'froo.getState() < 2'
-            [class.fa-circle-o] = 'froo.getState() == 2'
-            [class.fa-check-circle] = 'froo.getState() > 2'
-          ></span> 
-          <span>Injured Person</span>   
-        </a>
-      </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link" [class.text-light] = "froo.getState() < 3" >
-          <span class="fa fa-circle mr-3 bg-primary" 
-            [class.fa-circle] = 'froo.getState() < 3'
-            [class.fa-circle-o] = 'froo.getState() == 3'
-            [class.fa-check-circle] = 'froo.getState() > 3'
-          ></span> 
-          <span>Witness</span>   
-        </a>
-      </li>
-      <li class="nav-item mb-2">
-        <a class="nav-link"  [class.text-light] = "froo.getState() < 4" >
-          <span class="fa fa-circle mr-3 bg-primary" 
-            [class.fa-circle] = 'froo.getState() < 4'
-            [class.fa-circle-o] = 'froo.getState() == 4'
-            [class.fa-check-circle] = 'froo.getState() > 4'
-          ></span> 
-          <span>Signature</span>   
-        </a>
-      </li>
-    </ul>
-  </div>  
+    <app-sidebar-list [items]="sidebarList"></app-sidebar-list>
+  </div>
   <div class="clearfix" ></div>
   <hr class="my-2" />
   <div class="sidebar-footer text-center" >
