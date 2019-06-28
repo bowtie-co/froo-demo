@@ -2,6 +2,7 @@ import { Component, OnInit,Output, EventEmitter,Input } from '@angular/core';
 import { IncidentsService } from '../../services/incidents.service';
 import { FrooService } from 'src/app/froo.service';
 import { Router} from '@angular/router';
+import {Radio } from '../../../classes/radio'
 
 
 @Component({
@@ -14,6 +15,7 @@ export class LocationDetails1Component implements OnInit {
   @Input() incident: IncidentsService;
   @Output() notify = new EventEmitter();
 
+  checkedlocation:any;
   locations = [
 
     { title: "Off Road", opt: "off-road" },
@@ -26,6 +28,8 @@ export class LocationDetails1Component implements OnInit {
     { title: "Other", opt: "other" },
 
   ];
+  //configs = new Checkbox (this.locations.title,this.locations.title,true);
+  
 
   constructor(private froo:FrooService, private router:Router) { }
 
@@ -39,6 +43,10 @@ export class LocationDetails1Component implements OnInit {
   goNext() {
     this.incident.setLifeCycleState(4);
     this.notify.emit();
+  }
+
+  selectedList($event: Radio) {
+    this.checkedlocation = $event.name;
   }
 
 }

@@ -1,0 +1,4 @@
+<div class="form-check w-50 border border-left-0 border-right-0 py-2"
+  *ngFor="let radioButton of buttons">
+  <usac-radio [config]="radioButton" (state)="changeState($event)" ></usac-radio>
+</div>

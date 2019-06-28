@@ -31,7 +31,7 @@ export class IncidentComponent implements OnInit {
   }
   onNotify() {
     console.log(this.incident.getInput());
-    if(this.incident.getCurrentState() == 5) {
+    if(this.incident.getCurrentState() == 6) {
       this.router.navigate(['froo','thanks']);
     }
     this.state = this.incident.getCurrentState();

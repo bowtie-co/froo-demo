@@ -1,25 +1,16 @@
 <div class="container-fluid">
   <form>
       <div class="form-group w-50 mt-3 mb-3">
-          <label for="class">What was the Cause of the incident?</label>
+          <h5>What was the Cause of the incident?</h5>
           <select class="custom-select" id="class" >
               <option selected>select</option>
               <option *ngFor="let cause of causes" >{{cause}}</option>
           </select>
       </div>
       <div class="form-group">
-        <h3>What were the weather conditions</h3>
+        <h5>What were the weather conditions</h5>
       </div>
-      <div class="form-check w-50 border border-left-0 border-right-0 py-2 
-          " *ngFor = "let weather of weatherlist" >
-          <input class="form-check-input" 
-          type="radio"  
-          id="weather.opt"
-          (click) = "selectedWeather(weather.opt)"  >
-          <label class="form-check-label" for="weather.opt">
-            {{weather.title}}
-          </label>
-      </div>
+      <usac-radio-buttons [radioButtons]="weatherlist"  (selectedList) = "selectedList($event)" ></usac-radio-buttons>
       <div class="form-group w-50  my-3 py-3 ">
           <label for="description">
             Describe the incident
@@ -27,8 +18,17 @@
           <textarea class="form-control" id="description" rows="5"></textarea> 
       </div>
       <div class="container-fluid my-3">
-        <button (click)="goPrev()" class="btn btn-secondary px-4 ">BACK</button> 
-        <button (click)="goNext()" class="btn btn-secondary  float-right mr-4 px-4 ">NEXT</button>
+        <usac-btn
+         (click)="goPrev()" 
+         btnType = "btn-secondary"
+         btnText = "BACK" >
+        </usac-btn> 
+        <usac-btn
+         (click)="goNext()" 
+         class="float-right mr-4"
+         btnType = "btn-secondary"
+         btnText = "NEXT"
+         ></usac-btn>
       </div>  
   </form>
 </div>

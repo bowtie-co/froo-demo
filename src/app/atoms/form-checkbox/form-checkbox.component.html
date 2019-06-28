@@ -1,0 +1,17 @@
+<div class="form-check" >
+    <span class="fa fa-check-square mr-1 align-center" 
+      *ngIf="config.prefrence" 
+      (click)="changeState()" ></span>
+    <span class="fa fa-square mr-1 align-center" 
+      *ngIf="!config.prefrence" 
+      (click)="changeState()" ></span>
+    <input class="form-check-input" 
+      type="checkbox" 
+      id="{{config.name}}" 
+      name="{{config.name}}"
+      (change) = "sendState()"
+      [(ngModel)]="config.prefrence"  /> 
+    <label class="form-check-label align-center px-2" for="{{config.name}}">
+      {{config.title}}
+    </label>
+  </div>

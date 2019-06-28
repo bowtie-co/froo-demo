@@ -18,6 +18,6 @@ import { FrooModule } from './froo/froo.module';
     AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

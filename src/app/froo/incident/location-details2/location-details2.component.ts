@@ -2,6 +2,8 @@ import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
 import { IncidentsService } from '../../services/incidents.service';
 import { FrooService } from 'src/app/froo.service';
 import { Router} from '@angular/router';
+import {Radio } from '../../../classes/radio';
+import {Checkbox} from '../../../classes/checkbox';
 
 
 @Component({
@@ -55,4 +57,10 @@ export class LocationDetails2Component implements OnInit {
     this.notify.emit();
   }
 
+  selectedList($event: Radio) {
+    this.checkedConditiontype = $event.name;
+  }
+  selectedCheckBoxList($event: Checkbox) {
+    this.checkedCoursetype = $event.name;
+  }
 }

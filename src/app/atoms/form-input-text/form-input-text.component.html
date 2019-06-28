@@ -1,0 +1,29 @@
+<div class="form-group" >
+    <label [class.sr-only] = "!inputBox.label" for="{{inputBox.name}}">{{inputBox.title}}</label>
+    <div class="input-group mb-2">
+      <div class="input-group-prepend" 
+        *ngIf="inputBox.prepend" >
+        <div class="input-group-text">@</div>
+      </div>
+      <input type="text" 
+        name="{{inputBox.name}}" 
+        id="{{inputBox.name}}" 
+        autocomplete="{{inputBox.autoComplete}}"
+        class="form-control text-center"
+        [class.is-valid]  = "inputCtl.touched && inputCtl.valid"
+        [class.is-invalid]  = "inputCtl.touched && inputCtl.invalid"
+        placeholder="{{inputBox.placeholder}}" 
+        [(ngModel)]="inputBox.content"
+        #inputCtl = "ngModel"
+        [attr.minlength]="inputBox.rules.minlength"
+        [attr.maxlength]="inputBox.rules.maxlength"
+        (change) = "changeContent()"
+        [attr.required]="inputBox.isRequired" />
+    </div>
+    <div class="text-danger small btn-light" 
+        *ngIf="inputCtl.touched" >
+        <span *ngIf="inputCtl.invalid && inputCtl.errors.required " > {{ inputBox.title }} is mandatory </span>
+        <span *ngIf="inputCtl.invalid && inputCtl.errors.minlength" > {{ inputBox.title }} should be more than {{ inputCtl.errors.minlength.requiredLength }} characters </span>
+        <span *ngIf="inputCtl.invalid && inputCtl.errors.maxlength" > {{ inputBox.title }} should not more than {{ inputCtl.errors.maxlength.requiredLength }}  characters </span>
+    </div>
+  </div>

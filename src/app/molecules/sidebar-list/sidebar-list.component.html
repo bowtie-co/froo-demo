@@ -1,7 +1,7 @@
 <ul class="nav sidebar-list">
   <li class="nav-item" *ngFor="let item of items; let i = index" [attr.data-index]="i">
     <a class="nav-link">
-      <span class="fa fa-circle-o"
+      <span class="fa fa-circle-o bg-secondary"
           [class.fa-circle] = 'froo.getState() < i'
           [class.fa-circle-o] = 'froo.getState() == i'
           [class.fa-check-circle] = 'froo.getState() > i'

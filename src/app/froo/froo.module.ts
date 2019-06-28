@@ -19,13 +19,15 @@ import { LocationDetails3Component } from './incident/location-details3/location
 import { SidebarListComponent } from '../molecules';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UsacModule } from '../usac/usac.module';
 
 @NgModule({
   declarations: [FrooComponent, SidebarComponent, HomeComponent, EventComponent, EventConfirmComponent, PageTitleComponent, ThanksComponent, IncidentComponent, TimeOfIncidentComponent, RaceDetailsComponent, LocationDetails1Component, LocationDetails2Component, LocationDetails3Component, SidebarListComponent],
   imports: [
     CommonModule,
-    NgbModule,
     FormsModule,
+    NgbModule,
+    UsacModule,
     FrooRoutingModule
   ]
 })

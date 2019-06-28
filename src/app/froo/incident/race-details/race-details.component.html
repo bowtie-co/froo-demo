@@ -56,7 +56,16 @@
       </select>
   </div>
 <div class="container-fluid my-3">
-  <button (click)="goPrev()" class="btn btn-secondary  px-4">BACK</button> 
-  <button (click)="goNext()" class="btn btn-secondary  float-right mr-4 px-4">NEXT</button>
+  <usac-btn
+    (click)="goPrev()" 
+    btnType = "btn-secondary"
+    btnText = "BACK" >
+  </usac-btn> 
+  <usac-btn
+    (click)="goNext()" 
+    class="float-right mr-4"
+    btnType = "btn-secondary"
+    btnText = "NEXT"
+  ></usac-btn>
 </div>
 </div>

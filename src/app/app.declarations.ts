@@ -43,8 +43,8 @@ const declarations = [
   RacerDetailComponent,
   RacerSearchComponent,
   HeadingComponent,
-  BtnComponent,
-  TableComponent
+  TableComponent,
+  BtnComponent
 ];
 
 export {
