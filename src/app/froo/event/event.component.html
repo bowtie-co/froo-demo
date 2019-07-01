@@ -38,13 +38,7 @@
                 <div class="card bg-light  m-1"
                     [class.border-primary] = "selectedEvent == event.event_id"
                     (click) = "selectEvent(event)">
-                    <div class="card-body">
-                        <p class="card-text mb-1"> {{event.title}} </p>
-                        <p class="card-text mb-1"> Date : {{event.date_start}} to {{event.date_end}}   </p>
-                        <p class="card-text mb-1"> Address : {{event.address.street}},{{event.address.city}},{{event.address.state}},{{event.address.zip}} </p>
-                        <p class="card-text mb-1"> Org: {{event.org}} </p>
-                        <p *ngIf = "event.flyer_url" class="card-text mb-1"> Url: {{event.flyer_url}} </p>
-                    </div>
+                    <app-eventdetails [eventDetail]="event"></app-eventdetails>
                 </div>
             </div>
         </div>

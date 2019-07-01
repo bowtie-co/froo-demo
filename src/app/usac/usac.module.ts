@@ -9,6 +9,7 @@ import { FormRadioComponent } from '../atoms/form-radio/form-radio.component';
 import { FormCheckboxListComponent } from '../molecules/form-checkbox-list/form-checkbox-list.component';
 import { FormRadioListComponent } from '../molecules/form-radio-list/form-radio-list.component';
 import {FrooButtonComponent } from '../atoms/froo-button/froo-button.component';
+import { EventdetailsComponent } from '../molecules/eventdetails/eventdetails.component';
 
 
 
@@ -20,7 +21,8 @@ import {FrooButtonComponent } from '../atoms/froo-button/froo-button.component';
     FormCheckboxListComponent,
     FormRadioListComponent,
     FormRadioComponent,
-    FrooButtonComponent
+    FrooButtonComponent,
+    EventdetailsComponent
   ],
   imports: [
     CommonModule, FormsModule
@@ -33,7 +35,8 @@ import {FrooButtonComponent } from '../atoms/froo-button/froo-button.component';
     FormRadioComponent,
     CommonModule, 
     FormsModule,
-    FrooButtonComponent
+    FrooButtonComponent,
+    EventdetailsComponent
     
   ]
 })

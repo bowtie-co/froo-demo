@@ -28,6 +28,7 @@ import {
 
 import { EcosystemsComponent } from './ecosystems/ecosystems.component';
 
+
 const declarations = [
 //  AppComponent,
   EcosystemsComponent,
