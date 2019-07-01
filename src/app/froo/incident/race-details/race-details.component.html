@@ -1,12 +1,11 @@
 <div class="container-fluid">
   <div class="form-group w-50 mt-3 mb-3">
       <label for="class">Class</label>
-      <select class="custom-select" 
+      <app-select-list  
         id="class" 
-        [(ngModel)]="incident.raceClass" >
-          <option selected>select</option>
-          <option *ngFor="let class of incident.getRaceClasses()" >{{class}}</option>
-      </select>
+        [(ngModel)]="incident.raceClass"  
+        [list]="incident.getRaceClasses()" ngDefaultControl>
+      </app-select-list> 
   </div>
   <div class="form-group w-50 mb-4">
       <label for="ageRange" >Age Range : 0 to {{incident.raceAgeRange}}</label>
@@ -18,12 +17,11 @@
   </div>
   <div class="form-group w-50 mb-4">
       <label for="category">Category</label>
-      <select class="custom-select" 
-        id ="category" 
-        [(ngModel)]="incident.raceCategory" >
-          <option selected>select</option>
-          <option *ngFor="let category of incident.getRaceCategories()" >{{category}}</option>
-      </select>
+      <app-select-list       
+      id ="category" 
+      [(ngModel)]="incident.raceCategory" 
+      [list]="incident.getRaceCategories()" ngDefaultControl>
+      </app-select-list>
   </div>
   <div class="form-group mb-4">
       <span >GENDER</span>
@@ -48,12 +46,12 @@
   </div>
   <div class="form-group w-50 mb-4">
       <label for="coursetype">Course Type</label>
-      <select class="custom-select" 
+      <app-select-list
         id="coursetype" 
-        [(ngModel)]="incident.raceCourseType"  >
-          <option selected>select</option>
-          <option *ngFor="let courseType of incident.getRaceCourseTypes()" >{{courseType}}</option>
-      </select>
+        [(ngModel)]="incident.raceCourseType" 
+        [list]="incident.getRaceCourseTypes()" ngDefaultControl
+      ></app-select-list>
+      
   </div>
 <div class="container-fluid my-3">
   <usac-btn
