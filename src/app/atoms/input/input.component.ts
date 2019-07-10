@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+=======
+import { Component, Input, Output, EventEmitter } from '@angular/core';
+>>>>>>> 43f3dc3e8f6410414eba76a106b43fa6bf051ced
 
 @Component({
   selector: 'app-input',
