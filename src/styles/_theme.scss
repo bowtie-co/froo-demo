@@ -24,20 +24,20 @@ strong, .strong {
 
     }
   }
-  .form-control {
-    width: 244px;
-    min-height: 40px;
-    border-radius: 4px !important;
-    &:placeholder-shown {
-      border: solid 1px $usac-gray-2;
-      background-color: $usac-gray-2;
-      opacity: 0.6;
-    }
-    &:active, &:focus {
-      border: solid 1px $usac-blue-1 !important;
-      outline-style: none;
-      box-shadow: none;
-    }
+}
+.form-control {
+  width: 244px;
+  min-height: 40px;
+  border-radius: 4px !important;
+  &:placeholder-shown {
+    border: solid 1px $usac-gray-2;
+    background-color: $usac-gray-2;
+    opacity: 0.6;
+  }
+  &:active, &:focus {
+    border: solid 1px $usac-blue-1 !important;
+    outline-style: none;
+    box-shadow: none;
   }
 }
 .card {
