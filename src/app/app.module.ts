@@ -7,9 +7,10 @@ import { AppComponent } from './app.component';
 
 import { EcosystemsModule } from './ecosystems/ecosystems.module';
 import { FrooModule } from './froo/froo.module';
+import { InputComponent } from './atoms/input/input.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, InputComponent],
   imports: [
     BrowserModule,
     NgbModule,

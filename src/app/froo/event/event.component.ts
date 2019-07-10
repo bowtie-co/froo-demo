@@ -5,7 +5,6 @@ import { EventsService } from '../../events.service';
 import { FrooService } from '../../froo.service';
 import { stringify } from '@angular/compiler/src/util';
 
-
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
@@ -26,10 +25,10 @@ export class EventComponent implements OnInit {
   eventError: string;
 
   constructor(
-    private events:EventsService, 
+    private events:EventsService,
     private router: Router,
     private froo : FrooService
-  ) { 
+  ) {
 
   }
 
@@ -58,7 +57,7 @@ export class EventComponent implements OnInit {
       } else {
         if(Object.keys(results).length > 0) {
           this.eventError = "";
-        } 
+        }
       }
     }, (error) =>  {
       this.eventError = "Service is not available";

@@ -31,6 +31,7 @@ strong, .strong {
     &:placeholder-shown {
       border: solid 1px $usac-gray-2;
       background-color: $usac-gray-2;
+      opacity: 0.6;
     }
     &:active, &:focus {
       border: solid 1px $usac-blue-1 !important;
