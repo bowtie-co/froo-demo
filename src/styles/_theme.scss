@@ -13,6 +13,12 @@ strong, .strong {
 }
 
 .form {
+  .has-error {
+    .form-control {
+      border: solid 1px $usac-orange !important;
+    }
+    // error message below input { font-size: 14px; color: $usac-orange; }
+  }
   .form-group {
     .form-control {
 
@@ -21,8 +27,16 @@ strong, .strong {
   .form-control {
     width: 244px;
     min-height: 40px;
-    border-radius: 4px;
-    border: solid 1px $usac-blue-1;
+    border-radius: 4px !important;
+    &:placeholder-shown {
+      border: solid 1px $usac-gray-2;
+      background-color: $usac-gray-2;
+    }
+    &:active, &:focus {
+      border: solid 1px $usac-blue-1 !important;
+      outline-style: none;
+      box-shadow: none;
+    }
   }
 }
 .card {
