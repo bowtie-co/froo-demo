@@ -1,9 +1,10 @@
 <div class="form-group">
-  <label for="{{inputName}}>"></label>
-  <input type="{{inputType}}"
+  <label for="{{name}}>">{{label}}</label>
+  <input type="{{type}}"
     class="form-control"
-    name="{{inputName}}"
-    id="{{inputId}}"
-    placeholder="{{inputPlaceholder}}"
+    name="{{name}}"
+    id="{{id}}"
+    placeholder="{{placeholder}}"
+    (input)="handleInput($event)"
   />
 </div>
