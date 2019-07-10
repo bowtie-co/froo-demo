@@ -2,6 +2,7 @@
 
 import {
   BtnComponent,
+  InputComponent,
   HeadingComponent,
   LogoComponent,
   NavLinkComponent,
@@ -44,6 +45,7 @@ const declarations = [
   RacerSearchComponent,
   HeadingComponent,
   BtnComponent,
+  InputComponent,
   TableComponent
 ];
 

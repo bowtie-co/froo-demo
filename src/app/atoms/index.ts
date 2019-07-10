@@ -3,11 +3,13 @@ import { HeadingComponent } from './heading/heading.component';
 import { LogoComponent } from './logo/logo.component';
 import { NavLinkComponent } from './nav-link/nav-link.component';
 import { TopRacerCardComponent } from './top-racer-card/top-racer-card.component';
+import { InputComponent } from './input/input.component';
 
 export {
     BtnComponent,
     HeadingComponent,
     LogoComponent,
     NavLinkComponent,
-    TopRacerCardComponent
+    TopRacerCardComponent,
+    InputComponent
 };

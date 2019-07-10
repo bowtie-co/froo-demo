@@ -5,6 +5,9 @@
       </div>
       <input class="form-control" #searchBox id='search-box' (input)="search(searchBox.value)" placeholder="Search by first name"/>
     </div>
+    <form class="form">
+      <app-input inputId="test"></app-input>
+    </form>
     <div class="w-25 mx-auto d-flex flex-column bg-light">
       <!-- ngFor run for each todo in todos$, not todos. the "$" states that its an observable
       ngFor can't work with Observables, so we add an async pipe (Angular AsyncPipe), this
