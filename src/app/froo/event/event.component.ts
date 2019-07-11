@@ -30,7 +30,7 @@ export class EventComponent implements OnInit {
   eventError: string;
 
   constructor(
-    private events:EventsService, 
+    private events:EventsService,
     private router: Router,
     private froo : FrooService
   ) { 
@@ -76,7 +76,7 @@ export class EventComponent implements OnInit {
       } else {
         if(Object.keys(results).length > 0) {
           this.eventError = "";
-        } 
+        }
       }
     }, (error) =>  {
       this.eventError = "Service is not available";

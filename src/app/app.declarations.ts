@@ -2,10 +2,12 @@
 
 import {
   BtnComponent,
+  TextInputComponent,
+  CheckboxComponent,
   HeadingComponent,
   LogoComponent,
   NavLinkComponent,
-  TopRacerCardComponent
+  TopRacerCardComponent,
 } from './atoms';
 
 import {
@@ -44,6 +46,8 @@ const declarations = [
   RacerDetailComponent,
   RacerSearchComponent,
   HeadingComponent,
+  TextInputComponent,
+  CheckboxComponent,
   TableComponent,
   BtnComponent
 ];
