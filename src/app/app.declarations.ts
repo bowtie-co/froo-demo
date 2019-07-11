@@ -30,6 +30,7 @@ import {
 
 import { EcosystemsComponent } from './ecosystems/ecosystems.component';
 
+
 const declarations = [
 //  AppComponent,
   EcosystemsComponent,
@@ -45,10 +46,10 @@ const declarations = [
   RacerDetailComponent,
   RacerSearchComponent,
   HeadingComponent,
-  BtnComponent,
   TextInputComponent,
   CheckboxComponent,
-  TableComponent
+  TableComponent,
+  BtnComponent
 ];
 
 export {

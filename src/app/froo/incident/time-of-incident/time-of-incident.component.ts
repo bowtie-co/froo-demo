@@ -2,8 +2,7 @@ import { Component, OnInit,Input,EventEmitter,Output } from '@angular/core';
 import { FrooService } from 'src/app/froo.service';
 import { IncidentsService } from '../../services/incidents.service';
 import { Router} from '@angular/router';
-
-
+import { Radio } from '../../../classes/radio';
 
 @Component({
   selector: 'app-time-of-incident',
@@ -26,7 +25,6 @@ export class TimeOfIncidentComponent implements OnInit {
     { title: "Setup", opt: "setup" },
     { title: "Others", opt: "others" },
   ];
-  
 
   constructor(private froo: FrooService,private route:Router) { }
 
@@ -47,5 +45,7 @@ export class TimeOfIncidentComponent implements OnInit {
     this.incident.setOccuredOn(this.incidentStamp);
     this.notify.emit();
   }
-
+  selectedList($event: Radio) {
+    this.checkedOccurence = $event.name;
+  }
 }

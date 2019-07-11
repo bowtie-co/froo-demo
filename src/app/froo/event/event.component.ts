@@ -3,7 +3,8 @@ import { Router } from '@angular/router';
 
 import { EventsService } from '../../events.service';
 import { FrooService } from '../../froo.service';
-import { stringify } from '@angular/compiler/src/util';
+
+import { InputBox } from '../../classes/input-box';
 
 @Component({
   selector: 'app-event',
@@ -11,10 +12,14 @@ import { stringify } from '@angular/compiler/src/util';
   styleUrls: ['./event.component.scss']
 })
 export class EventComponent implements OnInit {
-  crire
-  findEventName: string;
-  findEventPermit: string;
-  findEventId: number;
+
+  //findEventName: string;
+  //findEventPermit: string;
+  //findEventId: number;
+
+  findEventName = new InputBox('eventName', 'Event Name', '', 'Search Event Name', false, true)
+  findEventPermit = new InputBox('eventPermit', 'Event Permit', '', 'Permit#', false, true)
+  findEventId = new InputBox('eventId', 'Event Id', '', 'Event#', false, true)
 
   eventsList = {};
 
@@ -28,8 +33,10 @@ export class EventComponent implements OnInit {
     private events:EventsService,
     private router: Router,
     private froo : FrooService
-  ) {
-
+  ) { 
+    this.findEventName.setRules({'minlength' : 6, 'maxlength': 20})
+    this.findEventPermit.setRules({'minlength' : 6, 'maxlength': 30})
+    this.findEventId.setRules({'minlength' : 1, 'maxlength': 8})
   }
 
   ngOnInit() {
@@ -37,16 +44,28 @@ export class EventComponent implements OnInit {
     this.isConfirmed = false;
   }
 
+  getEventName($event: any) {
+    this.findEventName.content = $event
+  }
+
+  getEventId($event: any) {
+    this.findEventId.content = $event
+  }
+
+  getEventPermit($event: any) {
+    this.findEventPermit.content = $event
+  }
+
   findEvents() {
     let criteria:any = {};
-    if(typeof(this.findEventName) != "undefined"){
-      criteria.name = this.findEventName;
+    if(typeof(this.findEventName.content) != "undefined"){
+      criteria.name = this.findEventName.content;
     }
-    if(typeof(this.findEventId) != "undefined"){
-      criteria.id = this.findEventId;
+    if(typeof(this.findEventId.content) != "undefined"){
+      criteria.id = this.findEventId.content;
     }
-    if(typeof(this.findEventPermit) != "undefined"){
-      criteria.permit = this.findEventPermit;
+    if(typeof(this.findEventPermit.content) != "undefined"){
+      criteria.permit = this.findEventPermit.content;
     }
 
     console.log(criteria);

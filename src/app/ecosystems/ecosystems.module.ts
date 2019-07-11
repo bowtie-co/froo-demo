@@ -12,9 +12,11 @@ import { EcosystemsComponent } from './ecosystems.component';
 import { imports } from '../app.imports';
 import { declarations } from '../app.declarations';
 
+
 @NgModule({
   declarations,
   imports,
-  exports: [EcosystemsComponent]
+  exports: [EcosystemsComponent],
+  
 })
 export class EcosystemsModule { }
