@@ -2,7 +2,9 @@
 
 // custom here
 $letter-spacing: .06px;
-
+a:focus, a:active {
+  font-weight: 500;
+}
 
 // include fonts here
 
