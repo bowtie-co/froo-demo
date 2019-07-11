@@ -4,6 +4,7 @@ import { LogoComponent } from './logo/logo.component';
 import { NavLinkComponent } from './nav-link/nav-link.component';
 import { TopRacerCardComponent } from './top-racer-card/top-racer-card.component';
 import { TextInputComponent } from './text-input/text-input.component';
+import { CheckboxComponent } from './checkbox/checkbox.component';
 
 export {
     BtnComponent,
@@ -11,5 +12,6 @@ export {
     LogoComponent,
     NavLinkComponent,
     TopRacerCardComponent,
-    TextInputComponent
+    TextInputComponent,
+    CheckboxComponent
 };

@@ -27,8 +27,13 @@ strong, .strong {
 }
 
 // Inputs
+.form-group, .input-group {
+  label {
+    margin-bottom: 3px;
+  }
+}
 .form-control {
-  &[type="text"] {
+  &[type="text"], &[type="password"], &[type="select"] {
     width: 244px;
     min-height: 40px;
     border-radius: 4px !important;

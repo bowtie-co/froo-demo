@@ -3,10 +3,11 @@
 import {
   BtnComponent,
   TextInputComponent,
+  CheckboxComponent,
   HeadingComponent,
   LogoComponent,
   NavLinkComponent,
-  TopRacerCardComponent
+  TopRacerCardComponent,
 } from './atoms';
 
 import {
@@ -46,6 +47,7 @@ const declarations = [
   HeadingComponent,
   BtnComponent,
   TextInputComponent,
+  CheckboxComponent,
   TableComponent
 ];
 
