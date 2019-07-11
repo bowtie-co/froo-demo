@@ -4,6 +4,7 @@
         <span class="input-group-text">Search Racers</span>
       </div>
       <app-text-input type="password" name="test" id="test" label="Test Input" placeholder="Test Words" (inputBinding)="search($event)"></app-text-input>
+      <app-checkbox type="checkbox" name="test" id="test" value="x" label="Test Input" (changeBinding)="search($event)"></app-checkbox>
     </div>
     <div class="w-25 mx-auto d-flex flex-column bg-light">
       <!-- ngFor run for each todo in todos$, not todos. the "$" states that its an observable

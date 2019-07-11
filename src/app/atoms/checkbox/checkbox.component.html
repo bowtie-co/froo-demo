@@ -1,1 +1,12 @@
-<p>checkbox works!</p>
+<div class="form-check">
+  <input type="{{type}}"
+    name="{{name}}"
+    id="{{id}}"
+    value="{{value}}"
+    checked="{{checked}}"
+    disabled="{{disabled}}"
+    (change)="handleChange($event)"
+  />
+  <span class="form-check-input"></span>
+  <label class="form-check-label" for="{{name}}>"></label>{{label}}</label>
+</div>

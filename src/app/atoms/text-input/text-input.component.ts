@@ -10,6 +10,7 @@ export class TextInputComponent implements OnInit {
   @Input() type: string;
   @Input() name: string;
   @Input() id: number;
+  @Input() value: string;
   @Input() placeholder: string;
   @Input() label: string;
 

@@ -48,13 +48,121 @@ strong, .strong {
       box-shadow: none;
     }
   }
-  &[type="checkbox"] {
-    width: 20px !important;
-    height: 20px !important;
-    border-radius: 1px !important;
-    border: solid 1px $usac-primary !important;
-  }
 }
+
+
+/* Customize the label (the container) */
+.form-check-label {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.form-check-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.form-check-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.form-check-label:hover input ~ .form-check-input {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.form-check-label input:checked ~ .form-check-input {
+  background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.form-check-input:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.form-check-label input:checked ~ .form-check-input:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.form-check-label .form-check-input:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+// .form-check {
+//   input {
+//     position: absolute;
+//     top: 5px;
+//     left: 0px;
+//     height: 20px;
+//     width: 20px;
+//     opacity: 0;
+//     cursor: pointer;
+//     &:checked ~ .form-check-input{
+//       background-color: $usac-primary;
+//     }
+//     &:checked ~ .form-check-input:after {
+//       left: 9px;
+//   top: 5px;
+//   width: 5px;
+//   height: 10px;
+//   border: solid white;
+//   border-width: 0 3px 3px 0;
+//   -webkit-transform: rotate(45deg);
+//   -ms-transform: rotate(45deg);
+//   transform: rotate(45deg);
+//     }
+//   }
+//   .form-check-input {
+//     position: absolute;
+//     height: 20px;
+//     width: 20px;
+//     border: solid 1px $usac-primary;
+//     border-radius: 1px;
+//     &:after {
+//       content: "";
+//       position: absolute;
+//       display: none;
+//     }
+//   }
+// }
+
+
+// .form-check-label {
+//   margin-top: 2px;
+//   margin-left: 8px;
+// }
 
 
 
