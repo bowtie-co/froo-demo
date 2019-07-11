@@ -25,21 +25,34 @@ strong, .strong {
     }
   }
 }
+
+// Inputs
 .form-control {
-  width: 244px;
-  min-height: 40px;
-  border-radius: 4px !important;
-  &:placeholder-shown {
-    border: solid 1px $usac-gray-2;
-    background-color: $usac-gray-2;
-    opacity: 0.6;
+  &[type="text"] {
+    width: 244px;
+    min-height: 40px;
+    border-radius: 4px !important;
+    &:placeholder-shown {
+      border: solid 1px $usac-gray-2;
+      background-color: $usac-gray-2;
+      opacity: 0.6;
+    }
+    &:active, &:focus {
+      border: solid 1px $usac-blue-1 !important;
+      outline-style: none;
+      box-shadow: none;
+    }
   }
-  &:active, &:focus {
-    border: solid 1px $usac-blue-1 !important;
-    outline-style: none;
-    box-shadow: none;
+  &[type="checkbox"] {
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 1px !important;
+    border: solid 1px $usac-primary !important;
   }
 }
+
+
+
 .card {
   margin: 10px auto;
 }
