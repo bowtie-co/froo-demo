@@ -1,7 +1,7 @@
 // this file includes USAC defined variables and variable overrides
 
 // custom here
-$letter-spacing: .05em;
+$letter-spacing: .06px;
 
 
 // include fonts here
@@ -47,7 +47,7 @@ $usac-gray-1: #fafafa;
 $usac-gray-2: #eaeaea;
 $usac-gray-3: #d5d5d5;
 $usac-gray-4: #bababa;
-$usac-primary: #192425;
+//$usac-primary: #192425; //if higher contrast tests desirable
 $usac-primary: #4d4d4d;
 $usac-red-primary: #c90019;
 $usac-red-1: #921515;
@@ -71,6 +71,7 @@ $usac-orange: #de5c0e;
 // Variables should follow the `$component-state-property-size` formula for
 // consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
 // bootstrap Color map
+
 
 // Spacing
 //
@@ -122,9 +123,9 @@ $gray-300: $usac-gray-3;
 $gray-400: $usac-gray-4;
 $gray-500: $usac-gray-4;
 $gray-600: $usac-gray-4;
-// $gray-700: #495057;
-// $gray-800: #343a40;
-// $gray-900: #212529;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: $usac-primary;
 $black:    #000;
 
 $blue:    $usac-blue-1;
@@ -137,6 +138,34 @@ $yellow:  $usac-yellow-1;
 $green:   $usac-green-1;
 $teal:    $usac-blue-help;
 $cyan:    $usac-blue-info;
+
+
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg:                   #fff !default;
+$body-color:                $usac-primary !default;
+
+
+// Links
+//
+// Style anchor elements.
+
+$link-color:                              $usac-blue-1;
+$link-decoration:                         none;
+$link-hover-color:                        darken($link-color, 15%);
+$link-hover-decoration:                   underline;
+// Darken percentage for links with `.text-*` class (e.g. `.text-success`)
+$emphasized-link-hover-darken-percentage: 15% !default;
+
+// Paragraphs
+//
+// Style p element.
+
+$paragraph-margin-bottom:   1rem !default;
+
 
 // Grid breakpoints
 //
@@ -176,7 +205,7 @@ $grid-gutter-width:           24px !default;
 //
 // Define common padding and border radius sizes and more.
 
-$line-height-lg:              1.5 !default;
+$line-height-lg:              2 !default;
 $line-height-sm:              1.5 !default;
 
 $border-width:                1px !default;
@@ -230,25 +259,25 @@ $font-size-base:              1rem !default; // Assumes the browser default, typ
 $font-size-lg:                $font-size-base * 1.25 !default;
 $font-size-sm:                $font-size-base * .875 !default;
 
-$font-weight-lighter:         lighter !default;
-$font-weight-light:           300 !default;
+$font-weight-lighter:         400 !default;
+$font-weight-light:           400 !default;
 $font-weight-normal:          400 !default;
-$font-weight-bold:            700 !default;
-$font-weight-bolder:          bolder !default;
+$font-weight-bold:            600 !default;
+$font-weight-bolder:          700 !default;
 
 $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.3125 !default;
 
-$h1-font-size:                $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
+$h1-font-size:                $font-size-base * 4 !default;
+$h2-font-size:                $font-size-base * 2.625 !default;
+$h3-font-size:                $font-size-base * 2 !default;
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
-$h6-font-size:                $font-size-base !default;
+$h6-font-size:                $font-size-base * 1.25 !default;
 
 $headings-margin-bottom:      $spacer / 2 !default;
 $headings-font-family:        null !default;
-//$headings-font-weight:        500 !default;
+$headings-font-weight:        500 !default;
 $headings-line-height:        1.2 !default;
 $headings-color:              null !default;
 
@@ -257,14 +286,14 @@ $display2-size:               5.5rem !default;
 $display3-size:               4.5rem !default;
 $display4-size:               3.5rem !default;
 
-$display1-weight:             300 !default;
-$display2-weight:             300 !default;
-$display3-weight:             300 !default;
-$display4-weight:             300 !default;
+$display1-weight:             400 !default;
+$display2-weight:             400 !default;
+$display3-weight:             400 !default;
+$display4-weight:             400 !default;
 $display-line-height:         $headings-line-height !default;
 
 $lead-font-size:              $font-size-base * 1.25 !default;
-$lead-font-weight:            300 !default;
+$lead-font-weight:            500 !default;
 
 $small-font-size:             80% !default;
 
@@ -290,44 +319,70 @@ $mark-bg:                     #fcf8e3 !default;
 
 $hr-margin-y:                 $spacer !default;
 
+html, body, p {
+  letter-spacing: $letter-spacing;
+}
 
 h1, .h1 {
   font-family: $usac-primary-font;
-  font-size: 48px;
-  font-weight: 900;
+  font-size: $h1-font-size;
+  font-weight: 700 !important;
 }
 h2, .h2{
   font-family: $usac-primary-font;
-  font-size: 42px;
-  font-weight: 900;
+  font-size: $h2-font-size;
+  font-weight: 600 !important;
 }
 h3, .h3{
   font-family: $usac-primary-font;
-  font-size: 36px;
-  font-weight: bold;
+  font-size: $h3-font-size;
+  font-weight: 500 !important;
 }
 h4, .h4 {
 font-family: $usac-primary-font;
-font-size: 32px;
-font-weight: 900;
+font-size: $h4-font-size;
+font-weight: 500 !important;
 }
 
 h5, .h5 {
   font-family: $usac-primary-font;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: $h5-font-size;
+  font-weight: 500 !important;
 }
 
 h6, .h6 {
   font-family: $usac-primary-font;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: $h6-font-size;
+  font-weight: 700 !important;
 }
+
+//
+// Headings
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: $headings-margin-bottom;
+  font-family: $headings-font-family;
+  font-weight: inherit;
+  line-height: $headings-line-height;
+  color: $headings-color;
+}
+
+.lead {
+  font-size: $lead-font-size;
+  font-weight: $lead-font-weight;
+}
+
+ul, ol  {
+  line-height: $line-height-lg;
+}
+
 // Font, line-height, and color for body text, headings, and more.
 
 $font-size-base: 1rem; // Assumes the browser default 16, to yield `15px` use .9375rem
 
-$font-family-sans-serif: $usac-primary-font, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font-family-sans-serif: '$usac-primary-font', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
 
