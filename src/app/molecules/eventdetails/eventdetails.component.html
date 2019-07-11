@@ -1,0 +1,7 @@
+<div class="card-body">
+  <p class="card-text mb-1">{{eventDetail.title}} </p>
+  <p class="card-text mb-1"> Date : {{eventDetail.date_start}} to {{eventDetail.date_end}}   </p>
+  <p class="card-text mb-1"> Address : {{eventDetail.address.street}},{{eventDetail.address.city}},{{eventDetail.address.state}},{{eventDetail.address.zip}} </p>
+  <p class="card-text mb-1"> Org: {{eventDetail.org}} </p>
+  <p *ngIf = "eventDetail.flyer_url"  class="card-text mb-1"> Url: {{eventDetail.flyer_url}} </p>
+</div>

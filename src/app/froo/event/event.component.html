@@ -1,82 +1,55 @@
 <section class="pl-0 mb-5" *ngIf="!isConfirmed" >
 <app-page-title [title] = "pageTitle"  ></app-page-title>
   <h3 class="text-left mt-4 "> Search for event </h3>
-  <form class="form">
-      <div class="row align-items-center justify-content-between pr-5">
-          <div class="col-md-4 ">
-              <div class="form-group">
-                  <label for="eventName">Event Name</label>
-                  <input type="text" 
-                      class="form-control rounded-0" 
-                      [(ngModel)]="findEventName"
-                      name="eventName"
-                      id="eventName"
-                      placeholder="Search Event Name"  />
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="form-group">
-                  <label for="eventPermit">Permit#</label>
-                  <input type="text" 
-                      class="form-control rounded-0" 
-                      name="eventPermit" 
-                      id="eventPermit" 
-                      placeholder="Permit#"
-                      [(ngModel)]="findEventPermit" 
-                  />
-              </div>
-          </div>
-          <div class="col-md-4">
-              <div class="form-group">
-                  <label for="eventId">Event ID</label>
-                  <input type="text" 
-                      class="form-control rounded-0" 
-                      name="eventId" 
-                      id="eventId" 
-                      placeholder="Event#"
-                      [(ngModel)]="findEventId" 
-                  />
-              </div>
-          </div>
-      </div>
-      <div class="form-group">
-          <button class="btn btn-secondary  px-4" 
-              [class.btn-disabled]="findEventName === ''"
-              (click) = "findEvents()" >SEARCH
-          </button>
-      </div>
-  </form>
-  <div class="container-fluid px-0" *ngIf="eventError" > 
-    <div class="p-2 bg-primary text-white border" >
-        {{eventError}}
+    <form class="form">
+        <div class="row align-items-center justify-content-between pr-5">
+            <div class="col-md-4">
+            <usac-input [inputBox]="findEventName" (pushContent)="getEventName($event)" ></usac-input>
+            </div>
+            <div class="col-md-4">
+            <usac-input [inputBox]="findEventPermit" (pushContent)="getEventPermit($event)" ></usac-input>
+            </div>
+            <div class="col-md-4">
+            <usac-input [inputBox]="findEventId" (pushContent)="getEventId($event)" ></usac-input>
+            </div>
+        </div>
+        <div class="form-group">
+            <usac-btn 
+                btnType="btn-secondary"
+                [class.btn-disabled]="findEventName === ''"
+                (click) = "findEvents()" 
+                btnText ="SEARCH">
+            </usac-btn>
+        </div>
+    </form>
+    <div class="container-fluid px-0" *ngIf="eventError" >
+        <div class="p-2 bg-primary text-white border" >
+            {{eventError}}
+        </div>
     </div>
-  </div>
-  <div class="container-fluid px-0"
-      *ngIf="(eventError == '')">
-      <div class="row align-items-start justify-content-start no-gutters">
-          <h5 class="mt-5 mb-3 "> Select your event </h5>
-      </div>
-      <div class="row align-items-start justify-content-start no-gutters">
-          <div class="col-md-4" 
-            *ngFor="let event of eventsList">
-              <div class="card bg-light rounded-0 m-1" 
-                  [class.border-primary] = "selectedEvent == event.event_id"
-                  (click) = "selectEvent(event)">
-                  <div class="card-body">
-                      <p class="card-text mb-1"> {{event.title}} </p>
-                      <p class="card-text mb-1"> Date : {{event.date_start}} to {{event.date_end}}   </p>
-                      <p class="card-text mb-1"> Address : {{event.address.street}},{{event.address.city}},{{event.address.state}},{{event.address.zip}} </p>
-                      <p class="card-text mb-1"> Org: {{event.org}} </p>
-                      <p *ngIf = "event.flyer_url" class="card-text mb-1"> Url: {{event.flyer_url}} </p>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="container-fluid text-right px-0" >
-          <a class="btn btn-secondary text-white  px-4" 
-              *ngIf = "selectedEvent > 0"
-              (click) = "nextProc()" >CONTINUE</a>   
-      </div>
+    <div class="container-fluid px-0"
+        *ngIf="(eventError == '')">
+        <div class="row align-items-start justify-content-start no-gutters">
+            <h5 class="mt-5 mb-3 "> Select your event </h5>
+        </div>
+        <div class="row align-items-start justify-content-start no-gutters">
+            <div class="col-md-4"
+                *ngFor="let event of eventsList">
+                <div class="card bg-light  m-1"
+                    [class.border-primary] = "selectedEvent == event.event_id"
+                    (click) = "selectEvent(event)">
+                    <app-eventdetails [eventDetail]="event"></app-eventdetails>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid text-right px-0" >
+            <usac-btn 
+                btnType="btn-secondary"
+                *ngIf = "selectedEvent > 0"
+                (click) = "nextProc()"
+                btnText = "CONTINUE">
+            </usac-btn>
+        </div>
   </div>
 </section>
 <app-event-confirm *ngIf="isConfirmed" [event]="froo.getEvent()" ></app-event-confirm>

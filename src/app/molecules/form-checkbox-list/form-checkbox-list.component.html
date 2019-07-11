@@ -1,0 +1,4 @@
+<div class="form-check w-50 border border-left-0 border-right-0 py-2"
+  *ngFor="let checkbox of boxes">
+  <usac-checkbox [config]="checkbox"  (state)="changeState($event)" ></usac-checkbox>
+</div>

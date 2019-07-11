@@ -2,21 +2,22 @@
   <h3 class="mb-4" > Is this Correct Event?</h3>
   <div class="row align-items-start justify-content-start">
       <div class="col-md-8" >
-          <div class="card bg-light rounded-0 m-1">
-              <div class="card-body">
-                  <p class="card-text mb-1"> {{event.title}} </p>
-                  <p class="card-text mb-1"> Date : {{event.date_start}} to {{event.date_end}}   </p>
-                  <p class="card-text mb-1"> Address : {{event.address.street}},{{event.address.city}},{{event.address.state}},{{event.address.zip}} </p>
-                  <p class="card-text mb-1"> Org: {{event.org}} </p>
-                  <p *ngIf = "event.flyer_url"  class="card-text mb-1"> Url: {{event.flyer_url}} </p>
-              </div>
+          <div class="card bg-light  m-1">
+            <app-eventdetails [eventDetail]="event"></app-eventdetails>
           </div>
       </div>
   </div>
   <div class="container-fluid my-5 px-0">    
-      <a routerLink="/froo/event" 
-          class="btn btn-outline-secondary  ">Isn't your event? Start Here</a> 
-      <a routerLink="/froo/incident" 
-          class="btn btn-secondary  float-right mr-4 ">Yes,Continue</a>   
+        <usac-btn 
+          routerLink="/froo/event"
+          btnType="btn-outline-secondary"
+          btnText = "Isn't your event? Start Here">
+        </usac-btn>
+        <usac-btn 
+            routerLink="/froo/incident"
+            btnType="btn-secondary"
+            class = "float-right mr-4"
+            btnText = "Yes,Continue">
+        </usac-btn>
    </div>
 </div>
