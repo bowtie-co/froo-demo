@@ -1,12 +1,11 @@
-<div class="form-check">
+<div class="custom-control custom-checkbox">
   <input type="{{type}}"
-    name="{{name}}"
+    class="custom-control-input"
     id="{{id}}"
     value="{{value}}"
     checked="{{checked}}"
     disabled="{{disabled}}"
     (change)="handleChange($event)"
   />
-  <span class="form-check-input"></span>
-  <label class="form-check-label" for="{{name}}>">{{label}}</label>
+  <label class="custom-control-label" for="{{id}}>">{{label}}</label>
 </div>
